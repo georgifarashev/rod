@@ -13,13 +13,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-rod/rod"
-	"github.com/go-rod/rod/lib/cdp"
-	"github.com/go-rod/rod/lib/devices"
-	"github.com/go-rod/rod/lib/input"
-	"github.com/go-rod/rod/lib/launcher"
-	"github.com/go-rod/rod/lib/proto"
-	"github.com/go-rod/rod/lib/utils"
+	"github.com/georgifarashev/rod"
+	"github.com/georgifarashev/rod/lib/cdp"
+	"github.com/georgifarashev/rod/lib/devices"
+	"github.com/georgifarashev/rod/lib/input"
+	"github.com/georgifarashev/rod/lib/launcher"
+	"github.com/georgifarashev/rod/lib/proto"
+	"github.com/georgifarashev/rod/lib/utils"
 	"github.com/ysmood/gson"
 )
 
