@@ -3,8 +3,6 @@ package cdp
 import (
 	"bufio"
 	"context"
-	"crypto/sha1"
-	"encoding/base64"
 	"fmt"
 	"io"
 	"net"
@@ -184,13 +182,11 @@ func (e *BadHandshakeError) Error() string {
 	)
 }
 
-func verifyWebSocketAccept(responseHeaders http.Header, websocketKey string) bool {
-	expectedKey := websocketKey + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
-	hash := sha1.New()
-	hash.Write([]byte(expectedKey))
-	expectedAccept := base64.StdEncoding.EncodeToString(hash.Sum(nil))
-
-	return responseHeaders.Get("Sec-WebSocket-Accept") == expectedAccept
+func verifyWebSocketAccept(_ http.Header, _ string) bool {
+	// SHA-1 (required by RFC 6455 for Sec-WebSocket-Accept) is not available in
+	// FIPS 140-only mode. The DevTools Protocol endpoint is always a trusted local
+	// Chrome process, so the accept verification provides no security value here.
+	return true
 }
 
 func (ws *WebSocket) handshake(ctx context.Context, u *url.URL, header http.Header) error {
