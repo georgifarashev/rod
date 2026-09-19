@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/go-rod/rod/lib/utils"
+	"github.com/georgifarashev/rod/lib/utils"
 	"github.com/ysmood/gson"
 )
 

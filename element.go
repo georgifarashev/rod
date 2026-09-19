@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-rod/rod/lib/cdp"
-	"github.com/go-rod/rod/lib/input"
-	"github.com/go-rod/rod/lib/js"
-	"github.com/go-rod/rod/lib/proto"
-	"github.com/go-rod/rod/lib/utils"
+	"github.com/georgifarashev/rod/lib/cdp"
+	"github.com/georgifarashev/rod/lib/input"
+	"github.com/georgifarashev/rod/lib/js"
+	"github.com/georgifarashev/rod/lib/proto"
+	"github.com/georgifarashev/rod/lib/utils"
 	"github.com/ysmood/gson"
 )
 
